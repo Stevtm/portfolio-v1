@@ -1,0 +1,398 @@
+/* CSS FOR PERSONAL WEBSITE */
+html{
+  height: 100%;
+}
+body{
+  margin-bottom: 50px;
+}
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+h3{
+  text-align: center;
+}
+/* LANDING PAGE STYLES */
+#landing_page{
+  margin: 0;
+}
+/* Heading */
+.landingstrip_top{
+  height: 15vh;
+  min-height: 100px;
+  background-color: #fff;
+}
+/* Middle Landing Strip */
+.landing_middle{
+  position: relative;
+  height: 70vh;
+  min-height: 535px;
+  background-color: #7aa18e;
+  opacity: 0;
+  animation-name: SlideUp;
+}
+/* Left-Side */
+#mist_mountain{
+  width: 100%;
+  padding-left: 10%;
+  padding-top: 6vh;
+  opacity: 0;
+  animation-name: FadeIn;
+  animation-delay: 0.5s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+#mount_fuji{
+  width: 100%;
+  padding-right: 10%;
+  padding-top: 6vh;
+  opacity: 0;
+  animation-name: FadeIn;
+  animation-duration: 1.5s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+}
+#kamikochi{
+  width: 100%;
+  padding-left: 28.5%;
+  padding-right: 28.5%;
+  padding-bottom: 6vh;
+  animation-name: FadeIn;
+  opacity: 0;
+  animation-duration: 1.5s;
+  animation-delay: 0.65s;
+  animation-fill-mode: forwards;
+}
+/* Middle */
+#welcome_block{
+  text-align: center;
+  background-color: #6d8e7e;
+  color: white;
+  padding-top: 100px;
+  font-weight: 100;
+}
+#enter_block{
+  text-align: center;
+  background-color: #6d8e7e;
+  padding-top: 20px;
+}
+#welcome{
+  font-family: 'Karla', sans-serif;
+  opacity: 0;
+  animation-name: FadeIn;
+  animation-duration: 1.5s;
+  animation-delay: 0.95s;
+  animation-fill-mode: forwards;
+}
+#im_steven{
+  opacity: 0;
+  animation-name: FadeIn;
+  animation-duration: 1.5s;
+  animation-delay: 1.1s;
+  animation-fill-mode: forwards;
+}
+#enter_button{
+  opacity: 0;
+  animation-name: FadeIn;
+  animation-duration: 1s;
+  animation-delay: 1.25s;
+  animation-fill-mode: forwards;
+}
+.btn-outline-secondary{
+  border-color: white;
+  color: white;
+  border-radius: 5px;
+}
+.btn-outline-secondary:hover{
+  background-color: white;
+  border-color: white;
+  color: #7aa18e;
+}
+/* Right-Side */
+#imperial_palace{
+  width: 100%;
+  padding-left: 10%;
+  padding-top: 6vh;
+  opacity: 0;
+  animation-name: FadeIn;
+  animation-duration: 1.5s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+}
+#matsumoto_mountains{
+  width: 100%;
+  padding-right: 10%;
+  padding-top: 6vh;
+  opacity: 0;
+  animation-name: FadeIn;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+#mist_camping{
+  width: 100%;
+  padding-left: 28.5%;
+  padding-right: 28.5%;
+  padding-bottom: 6vh;
+  animation-name: FadeIn;
+  opacity: 0;
+  animation-duration: 1.5s;
+  animation-delay: 0.65s;
+  animation-fill-mode: forwards;
+}
+/* INFO PAGE STYLES */
+#info_page{
+  padding: 0;
+}
+/* Heading */
+.topbar{
+  opacity: 0;
+  animation-name: SlideDown;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+/* Bootstrap Navbar */
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: 15px;
+  font-weight: 450;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.top_colorbar{
+  height: 2vh;
+  background-color: #7aa18e;
+}
+/* MAIN CONTENT */
+/* Carousel */
+#nav_carousel{
+}
+.carousel{
+  opacity: 0;
+  animation-name: FadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.carousel_info{
+  width: 100%;
+  padding-top: 4vh;
+  height: 85vh;
+}
+.scroll_carousel{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.carousel_heading{
+  padding-bottom: 2vh;
+  font-family: 'Courgette', cursive;
+}
+/* Work History Timeline */
+.timeline{
+  border-left: 4px solid black;
+  height: 75vh;
+  overflow: auto;
+}
+.timeline_item{
+  padding-top: 2vh;
+  border-bottom: 1px dashed grey;
+}
+.timeline_info{
+  padding-top: 1vh;
+  text-indent: 3%;
+}
+.timeline_last{
+  padding-top: 2vh;
+}
+/* Education History */
+#education{
+  overflow: auto;
+  overflow-x: hidden;
+}
+.education_heading{
+  text-align: center;
+}
+#queens_logo{
+  width: 100%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.queens_info{
+  padding-top: 5vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  overflow: auto;
+}
+.courses_info{
+  padding-bottom: 15px;
+  font-family: 'Courgette', cursive;
+}
+.course_heading{
+  background-color: rgba(255,255,255,0.6);
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+.courses_taken{
+  text-indent: 20px;
+}
+#biomechanical_courses{
+  background-color: lightgrey;
+  padding-bottom: 1px;
+}
+#mechanical_courses{
+  background-color: #A1BDAF;
+  padding-bottom: 1px;
+}
+#other_courses{
+  background-color: #bdd0c7;
+  padding-bottom: 1px;
+}
+/* Design Experience */
+.portfolio_container{
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.portfolio_container:hover{
+  opacity: 0.7;
+  transform: scale(1.02);
+  transition: 0.5s ease;
+}
+.portfolio_img{
+  width: 100%;
+  padding: 0;
+  height: 100px;
+  object-fit: cover;
+}
+.project-header{
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+.portfolio{
+}
+.portfolio_grey{
+  background-color: #d6d6d6;
+  transition: 0.5s ease;
+}
+.eportfolio_title{
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.eportfolio_title .portfolio_dark{
+  color: #3d5047;
+}
+.portfolio_info{
+  width: 80%;
+  margin-left: 10%;
+  padding-left: 10px;
+  border-left: 2px solid black;
+}
+#portfolio_site{
+  display: none;
+}
+#ileostomy{
+  display: none;
+}
+#machine_design{
+  display:none;
+}
+#vermicomposting{
+  display: none;
+}
+#turbine{
+  display: none;
+}
+/* Skills and Abilities */
+#skills{
+  overflow: auto;
+  overflow-x: hidden;
+}
+.skills_block{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.skills_heading{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.icon_heading{
+  text-align: center;
+  color:#6d8e7e;
+}
+.skills_info{
+  text-align: center;
+  color: grey;
+}
+/* About MEEEE */
+.aboutme_subheading{
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  padding-bottom: 10px;
+}
+#about_me-info{
+  overflow: auto;
+}
+#cigar_smokin{
+  width: 60%;
+  padding-top: 10vh;
+  position: relative;
+  left: 30%;
+}
+.full_bio{
+  padding-top: 5vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  overflow: auto;
+}
+/* ANIMATIONS */
+@keyframes FadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes SlideUp {
+  from {
+    opacity:0;
+    transform: translate3d(0,100%,0);
+  }
+  to  {
+    opacity:1;
+    transform: none;
+  }
+}
+@keyframes SlideDown {
+  from {
+    opacity:0;
+    transform: translate3d(0,-100%,0);
+  }
+  to  {
+    opacity:1;
+    transform: none;
+  }
+}
+@keyframes SlideLeft {
+  from {
+    opacity:0;
+    transform: translate3d(-100%,0,0);
+  }
+  to  {
+    opacity:1;
+    transform: none;
+  }
+}
+@keyframes SlideRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%,0,0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.slide_animation{
+  animation-duration: 0.75s;
+  animation-fill-mode: both;
+}
