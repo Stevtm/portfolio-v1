@@ -263,11 +263,24 @@ h3{
   padding: 0;
   height: 100px;
   object-fit: cover;
+  border-top: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  border-left: 1px solid lightgrey;
 }
 .project-header{
   text-align: center;
   padding-top: 0px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+}
+.project_divider{
+  font-family: 'Courgette', cursive;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1.5px dashed darkgrey;
+}
+.current_project{
+  padding-bottom: 15px;
 }
 .portfolio{
 }
@@ -288,6 +301,26 @@ h3{
   margin-left: 10%;
   padding-left: 10px;
   border-left: 2px solid black;
+}
+#gait{
+  display: none;
+}
+.gait-info{
+  width: 100%;
+
+}
+.gait-pic{
+  width: 80%;
+  padding-bottom: 10px;
+}
+#capstone-pic{
+  width: 90%;
+}
+#phone{
+  display: none;
+}
+#walking_energy{
+  display: none;
 }
 #portfolio_site{
   display: none;
@@ -364,7 +397,7 @@ h3{
 }
 .full_bio{
   padding-top: 5vh;
-  padding-left: 5%;
+  padding-left: 0%;
   padding-right: 5%;
   overflow: auto;
 }
