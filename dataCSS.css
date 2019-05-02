@@ -1,0 +1,88 @@
+html{
+  height: 100%;
+}
+body{
+  margin-bottom: 0px;
+}
+/* LANDING PAGE STYLES */
+#Workout{
+  background-color: #385623;
+  height: 50vh;
+  text-align: center;
+  color: white;
+}
+#Sleep{
+  background-color: #1F4E79;
+  height: 50vh;
+  text-align: center;
+  color: white;
+}
+/* WORKOUT SELECTOR PAGE STYLES */
+.WorkoutDay{
+  height: 25vh;
+  text-align: center;
+}
+#Legs{
+  background-color: #8B0705;
+}
+#Push{
+  background-color: #385623;
+}
+#Pull{
+  background-color: #1F4E79;
+}
+#Back{
+  background-color: darkgrey;
+}
+/* WORKOUT INPUT STYLES */
+.formPage{
+  height: 100vh;
+  padding-top: 4vh;
+  text-align: center;
+}
+#legsForm{
+  border: 20px solid #8B0705;
+  border-radius: 0em;
+}
+#pushForm{
+  border: 20px solid #385623;
+  border-radius: 0em;
+}
+#pullForm{
+  border: 20px solid #1F4E79;
+  border-radius: 0em;
+}
+#backForm{
+  border: 20px solid darkgrey;
+  border-radius: 0em;
+}
+/* BUTTON STYLES */
+.btn-outline-secondary{
+  border-color: white;
+  color: white;
+  border-radius: 5px;
+}
+.btn-outline-secondary:hover{
+  background-color: white;
+  border-color: white;
+  color: black;
+}
+.homebtn{
+  margin-top: 20vh;
+  font-size: 6vh;
+}
+.workoutbtn{
+  margin-top: 8vh;
+  font-size: 3vh;
+}
+/* ANIMATIONS */
+@keyframes SlideDown {
+  from {
+    opacity:0;
+    transform: translate3d(0,-100%,0);
+  }
+  to  {
+    opacity:1;
+    transform: none;
+  }
+}
