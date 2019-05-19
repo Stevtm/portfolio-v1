@@ -24,37 +24,78 @@ body{
 }
 #Legs{
   background-color: #8B0705;
+  opacity: 0;
+  animation-name: SlideLeft;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 #Push{
   background-color: #385623;
+  opacity: 0;
+  animation-name: SlideLeft;
+  animation-duration: 0.5s;
+  animation-delay: 0.15s;
+  animation-fill-mode: forwards;
 }
 #Pull{
   background-color: #1F4E79;
+  opacity: 0;
+  animation-name: SlideLeft;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
 }
 #Back{
-  background-color: darkgrey;
+  background-color: #525252;
+  opacity: 0;
+  animation-name: SlideLeft;
+  animation-duration: 0.5s;
+  animation-delay: 0.45s;
+  animation-fill-mode: forwards;
 }
 /* WORKOUT INPUT STYLES */
 .formPage{
-  height: 100vh;
-  padding-top: 4vh;
   text-align: center;
 }
-#legsForm{
-  border: 20px solid #8B0705;
-  border-radius: 0em;
+.legsForm{
+  background-color: #8B0705;
 }
-#pushForm{
-  border: 20px solid #385623;
-  border-radius: 0em;
+.pushForm{
+  background-color: #385623;
+  animation-name: FadeRedGreen;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
-#pullForm{
-  border: 20px solid #1F4E79;
-  border-radius: 0em;
+.pullForm{
+  background-color: #1F4E79;
+  animation-name: FadeRedBlue;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
-#backForm{
-  border: 20px solid darkgrey;
-  border-radius: 0em;
+.backForm{
+  background-color: #525252;
+  animation-name: FadeRedGrey;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+#formTop{
+  height: 25vh;
+  color: white;
+}
+#formBottom{
+  padding-top: 4vh;
+  height: 75vh;
+  opacity: 0;
+  animation-name: SlideLeft;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+.dateInput{
+  text-align: center;
+}
+.Weights{
+  text-align: right;
+  padding-right: 20%;
 }
 /* BUTTON STYLES */
 .btn-outline-secondary{
@@ -85,4 +126,44 @@ body{
     opacity:1;
     transform: none;
   }
+}
+@keyframes SlideLeft {
+  from {
+    opacity:0;
+    transform: translate3d(100%,0,0);
+  }
+  to  {
+    opacity:1;
+    transform: none;
+  }
+}
+@keyframes SlideRight {
+  from {
+    opacity:0;
+    transform: translate3d(-100%,0,0);
+  }
+  to  {
+    opacity:1;
+    transform: none;
+  }
+}
+@keyframes FadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes FadeRedGreen {
+  from{ background-color: #8B0705}
+  to{ background-color: #385623}
+}
+@keyframes FadeRedBlue {
+  from{ background-color: #8B0705}
+  to{ background-color: #1F4E79}
+}
+@keyframes FadeRedGrey {
+  from{ background-color: #8B0705}
+  to{ background-color: #525252}
 }

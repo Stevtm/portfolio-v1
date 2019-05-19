@@ -18,30 +18,37 @@
 <body>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-12 formPage" id="pushForm">
-        <h1> Push Day </h1>
-        <br>
+      <div class="col-sm-12 formPage pushForm" id="formTop">
+        <a class="btn btn-outline-secondary btn-lg workoutbtn" role="button">
+          PUSH DAY
+        </a>
+      </div>
         <!-- Input Forms -->
+      <div class="col-sm-12 formPage" id="formBottom">
         <form name="submit-to-google-sheet">
-        Day:
-        <input type="text" name="Day" style="width:30px">
-        Month:
-        <input type="text" name="Month" style="width:30px">
-        Year:
-        <input type="text" name="Year" style="width:50px"><br><br>
-        Warmup Calories:
-        <input type="text" name="warmCals" style="width:40px"><br><br>
-        Squats (3x5):
-        <input type="text" name="Squats" style="width:40px"><br><br>
-        Incline Bench (3x8):
-        <input type="text" name="iBench" style="width:40px"><br><br>
-        Incline Fly (3x8):
-        <input type="text" name="iFly" style="width:40px"><br><br>
-        French Curls (3x8):
-        <input type="text" name="fCurls" style="width:40px"><br><br>
-        Cooldown Calories:
-        <input type="text" name="coolCals" style="width:40px"><br><br>
-        <input type="submit" value="Submit">
+        <div class="dateInput">
+          Day:
+          <input type="text" name="Day" style="width:40px">
+          Month:
+          <input type="text" name="Month" style="width:40px">
+          Year:
+          <input type="text" name="Year" style="width:60px"><br><br>
+        </div>
+        <div class="Weights">
+          Warmup Calories:
+          <input type="text" name="warmCals" style="width:40px"><br><br>
+          Squats (3x5):
+          <input type="text" name="Squats" style="width:40px"><br><br>
+          Incline Bench (3x8):
+          <input type="text" name="iBench" style="width:40px"><br><br>
+          Incline Fly (3x8):
+          <input type="text" name="iFly" style="width:40px"><br><br>
+          French Curls (3x8):
+          <input type="text" name="fCurls" style="width:40px"><br><br>
+          Cooldown Calories:
+          <input type="text" name="coolCals" style="width:40px"><br><br>
+        </div>
+        <input href="confirmation.html" type="submit" value="Submit">
         </form>
       </div>
     </div>
