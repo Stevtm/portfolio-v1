@@ -19,7 +19,7 @@ body{
 }
 /* WORKOUT SELECTOR PAGE STYLES */
 .WorkoutDay{
-  height: 22.5vh;
+  height: 22vh;
   text-align: center;
 }
 #Legs{
@@ -80,7 +80,7 @@ body{
   animation-fill-mode: forwards;
 }
 #formTop{
-  height: 25vh;
+  height: 22vh;
   color: white;
 }
 #formBottom{
@@ -114,7 +114,7 @@ body{
   font-size: 6vh;
 }
 .workoutbtn{
-  margin-top: 8vh;
+  margin-top: 7.8vh;
   font-size: 3vh;
 }
 /* ANIMATIONS */
