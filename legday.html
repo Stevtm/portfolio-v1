@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="workoutCSS.css">
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+    <script src="workout.js"></script>
+    <title>Leg Day Tracking</title>
+</head>
+<body>
+    <h1> 
+        Leg Day Tracking
+    </h1>
+    <!-- Warmup Calories -->
+    Warmup Calories:
+    <input type="text" placeholder="calories" id="warmupCals" style="width:40px">
+    <br>
+    <!-- Back Squats --> 
+    Back Squats:
+    <input type="text" placeholder="(3)" id="bSquat_sets" style="width:15px">
+    x
+    <input type="text" placeholder="(5)" id="bSquat_reps" style="width:15px">
+    <input type="text" placeholder="lbs" id="bSquat_weight" style="width:40px">
+    <br>
+    <p id="prev_bSquat"></p>
+    <!-- Front Squats -->
+    Front Squats: 
+    <input type="text" placeholder="(3)" id="fSquat_sets" style="width:15px">
+    x
+    <input type="text" placeholder="(8)" id="fSquat_reps" style="width:15px">
+    <input type="text" placeholder="lbs" id="fSquat_weight" style="width:40px">
+    <br>
+    <p id="prev_fSquat"></p>
+    <!-- Lunges -->
+    Lunges:
+    <input type="text" placeholder="(4)" id="Lunge_sets" style="width:15px">
+    x
+    <input type="text" placeholder="(12)" id="Lunge_reps" style="width:15px">
+    <input type="text" placeholder="lbs" id="Lunge_weight" style="width:40px">
+    <br>
+    <p id="prev_Lunge"></p>
+    <!-- Calf Raises -->
+    Calf Raises:
+    <input type="text" placeholder="(4)" id="calfRaise_sets" style="width:15px">
+    x
+    <input type="text" placeholder="(12)" id="calfRaise_reps" style="width:15px">
+    <input type="text" placeholder="lbs" id="calfRaise_weight" style="width:40px">
+    <br>
+    <p id="prev_calfRaise"></p>
+    <!-- Leg Extensions -->
+    Leg Extensions:
+    <input type="text" placeholder="(4)" id="legExt_sets" style="width:15px">
+    x
+    <input type="text" placeholder="(10)" id="legExt_reps" style="width:15px">
+    <input type="text" placeholder="lbs" id="legExt_weight" style="width:40px">
+    <br>
+    <p id="prev_legExt"></p>
+    <!-- Hamstring Curls -->
+    Hamstring Curls:
+    <input type="text" placeholder="(4)" id="hCurl_sets" style="width:15px">
+    x
+    <input type="text" placeholder="(10)" id="hCurl_reps" style="width:15px">
+    <input type="text" placeholder="lbs" id="hCurl_weight" style="width:40px">
+    <br>
+    <p id="prev_hCurl"></p>
+    <!-- Cooldown Calories -->
+    Cooldown Calories:
+    <input type="text" placeholder="calories" id="coolCals" style="width:40px">
+    <br>
+    <button onclick="leg_writeData()"> Submit </button>
+</body>
+</html>
