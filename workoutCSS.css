@@ -1,0 +1,124 @@
+/* || GENERAL PAGE STYLES */ 
+html{
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+body{
+    margin-bottom: 0px;
+}
+input{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 5px;
+}
+p{
+    margin-bottom: 0;
+    display: inline;
+}
+.eightpx_spacer{
+    height: 8px;
+}
+/* Input Page Headers */
+.workoutDay_header{
+    text-align: center;
+    padding-top: 30px;
+} 
+/* || INPUT BLOCK STYLES */
+
+/* General Block Styles */
+.input_block{
+    /* Block Shape */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    border-radius: 15px;
+    border-width: 3px;
+    /* Block Styling */
+    text-align: center;
+    border-style: solid;
+}
+.block_header{
+    /* Block Shape */
+    padding-top: 8px;
+    border-radius: 5px;
+    height: 35px;
+    /* Block Styling */
+    color: white;
+}
+.input_button{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.btn-primary{
+    background-color: white;
+    border-width: 3px;
+}
+.form-control{
+    width: 70px;
+    text-align: center;
+    display: inline;
+}
+/* Button Styles */
+.btn-pull{
+    color: #1F4E79;
+    border-color: #1F4E79;
+}
+.btn-pull:hover{
+    background-color: #1F4E79;
+    border-color: #1F4E79;
+}
+/* Pull Exercise Block Styles */
+#warmupCals_block-pull{
+    border-color: #1F4E79;
+}
+#warmupCals_header-pull{
+    background-color: #1F4E79;
+}
+#boRow_block{
+    border-color: #042848;
+}
+#boRow_header{
+    background-color: #042848;
+}
+#Shrug_block{
+    border-color: #103C63;
+}
+#Shrug_header{
+    background-color: #103C63;
+}
+#seatRow_block{
+    border-color: #35628B;
+}
+#seatRow_header{
+    background-color: #35628B;
+}
+#latPD_block{
+    border-color: #557DA1;
+}
+#latPD_header{
+    background-color: #557DA1;
+}
+#facePull_block{
+    border-color: #35628B;
+}
+#facePull_header{
+    background-color: #35628B;
+}
+#rowMachine_block{
+    border-color: #103C63;
+}
+#rowMachine_header{
+    background-color: #103C63;
+}
+#coolCals_block-pull{
+    border-color: #042848;
+}
+#coolCals_header-pull{
+    background-color: #042848;
+}
+/* Block Headers */
+/* Warmup Calories */
+
