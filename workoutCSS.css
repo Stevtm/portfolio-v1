@@ -70,6 +70,14 @@ p{
     background-color: #1F4E79;
     border-color: #1F4E79;
 }
+.btn-push{
+    color: #8B0705;
+    border-color: #8B0705;
+}
+.btn-push:hover{
+    background-color: #8B0705;
+    border-color: #8B0705;
+}
 /* Pull Exercise Block Styles */
 #warmupCals_block-pull{
     border-color: #1F4E79;
@@ -119,6 +127,54 @@ p{
 #coolCals_header-pull{
     background-color: #042848;
 }
+/* Push Exercise Block Styles */
+#warmupCals_block-push{
+    border-color: #8B0705;
+}
+#warmupCals_header-push{
+    background-color: #8B0705;
+}
+#iBench_block{
+    border-color: #3C0200;
+}
+#iBench_header{
+    background-color: #3C0200;
+}
+#Fly_block{
+    border-color: #650300;
+}
+#Fly_header{
+    background-color: #650300;
+}
+#fCurl_block{
+    border-color: #AB201D;
+}
+#fCurl_header{
+    background-color: #AB201D;
+}
+#latRaise_block{
+    border-color: #CB413D;
+}
+#latRaise_header{
+    background-color: #CB413D;
+}
+#frontRaise_block{
+    border-color: #AB201D;
+}
+#frontRaise_header{
+    background-color: #AB201D;
+}
+#OHP_block{
+    border-color: #650300;
+}
+#OHP_header{
+    background-color: #650300;
+}
+#coolCals_block-push{
+    border-color: #3C0200;
+}
+#coolCals_header-push{
+    background-color: #3C0200;
+}
 /* Block Headers */
 /* Warmup Calories */
-
