@@ -78,6 +78,14 @@ p{
     background-color: #8B0705;
     border-color: #8B0705;
 }
+.btn-leg{
+    color: #385623;
+    border-color: #385623;
+}
+.btn-leg:hover{
+    background-color: #385623;
+    border-color: #385623;
+}
 /* Pull Exercise Block Styles */
 #warmupCals_block-pull{
     border-color: #1F4E79;
@@ -175,6 +183,56 @@ p{
 }
 #coolCals_header-push{
     background-color: #3C0200;
+}
+
+/* Leg Exercise Block Styles */
+#warmupCals_block-leg{
+    border-color: #385623;
+}
+#warmupCals_header-leg{
+    background-color: #385623;
+}
+#bSquat_block{
+    border-color: #1B3508;
+}
+#bSquat_header{
+    background-color: #1B3508;
+}
+#fSquat_block{
+    border-color: #2A4815;
+}
+#fSquat_header{
+    background-color: #2A4815;
+}
+#Lunge_block{
+    border-color: #455E34;
+}
+#Lunge_header{
+    background-color: #455E34;
+}
+#calfRaise_block{
+    border-color: #64824F;
+}
+#calfRaise_header{
+    background-color: #64824F;
+}
+#legExt_block{
+    border-color: #455E34;
+}
+#legExt_header{
+    background-color: #455E34;
+}
+#hCurl_block{
+    border-color: #2A4815;
+}
+#hCurl_header{
+    background-color: #2A4815;
+}
+#coolCals_block-leg{
+    border-color: #1B3508;
+}
+#coolCals_header-leg{
+    background-color: #1B3508;
 }
 /* Block Headers */
 /* Warmup Calories */
