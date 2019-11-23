@@ -234,5 +234,56 @@ p{
 #coolCals_header-leg{
     background-color: #1B3508;
 }
+
+/* Back Exercise Block Styles */
+#warmupCals_block-back{
+    border-color: #525252;
+}
+#warmupCals_header-back{
+    background-color: #525252;
+}
+#dLift_block{
+    border-color: #020202;
+}
+#dLift_header{
+    background-color: #020202;
+}
+#backExt_block{
+    border-color: #1F1F1F;
+}
+#backExt_header{
+    background-color: #1F1F1F;
+}
+#Plank_block{
+    border-color: #797979;
+}
+#Plank_header{
+    background-color: #797979;
+}
+#sidePlank_block{
+    border-color: #9E9E9E;
+}
+#sidePlank_header{
+    background-color: #9E9E9E;
+}
+#sKick_block{
+    border-color: #797979;
+}
+#sKick_header{
+    background-color: #797979;
+}
+#mTwist_block{
+    border-color: #1F1F1F;
+}
+#mTwist_header{
+    background-color: #1F1F1F;
+}
+#coolCals_block-back{
+    border-color: #020202;
+}
+#coolCals_header-back{
+    background-color: #020202;
+}
+
 /* Block Headers */
 /* Warmup Calories */
