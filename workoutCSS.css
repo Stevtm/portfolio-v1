@@ -86,6 +86,14 @@ p{
     background-color: #385623;
     border-color: #385623;
 }
+.btn-back{
+    color: #525252;
+    border-color: #525252;
+}
+.btn-back:hover{
+    background-color: #525252;
+    border-color: #525252;
+}
 /* Pull Exercise Block Styles */
 #warmupCals_block-pull{
     border-color: #1F4E79;
