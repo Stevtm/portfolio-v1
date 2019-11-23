@@ -277,6 +277,88 @@ function leg_writeData() {
     })
 }
 
+// Write Back Day Data to the Database
+function back_writeData() {
+    // Write to "Date" Child
+    firebase.database().ref(currentDate).set({
+        // Warmup Calories
+        warmupCals: document.getElementById("warmupCals").value,
+        // Deadlifts
+        dLift_sets: document.getElementById("dLift_sets").value,
+        dLift_reps: document.getElementById("dLift_reps").value,
+        dLift_weight: document.getElementById("dLift_weight").value,
+        // Back Extensions
+        backExt_sets: document.getElementById("backExt_sets").value,
+        backExt_reps: document.getElementById("backExt_reps").value,
+        backExt_weight: document.getElementById("backExt_weight").value,
+        // Plank
+        Plank_sets: document.getElementById("Plank_sets").value,
+        Plank_time: document.getElementById("Plank_time").value,
+        // Side Plank
+        sidePlank_sets: document.getElementById("sidePlank_sets").value,
+        sidePlank_time: document.getElementById("sidePlank_time").value,
+        // Scissor Kick
+        sKick_sets: document.getElementById("sKick_sets").value,
+        sKick_reps: document.getElementById("sKick_reps").value,
+        // Mason Twists
+        mTwist_sets: document.getElementById("mTwist_sets").value,
+        mTwist_reps: document.getElementById("mTwist_reps").value,
+        mTwist_weight: document.getElementById("mTwist_weight").value,
+        // Cooldown Calories
+        coolCals: document.getElementById("coolCals").value,
+    });
+    // Write to Specific Workout Folders:
+        // Warmup Calories
+    firebase.database().ref("warmupCals").push({
+        date: currentDate,
+        cals: document.getElementById("warmupCals").value
+    })
+        // Deadlifts
+    firebase.database().ref("dLift").push({
+        date: currentDate,
+        dLift_sets: document.getElementById("dLift_sets").value,
+        dLift_reps: document.getElementById("dLift_reps").value,
+        dLift_weight: document.getElementById("dLift_weight").value,
+    })
+        // Back Extensions
+    firebase.database().ref("backExt").push({
+        date: currentDate,
+        backExt_sets: document.getElementById("backExt_sets").value,
+        backExt_reps: document.getElementById("backExt_reps").value,
+        backExt_weight: document.getElementById("backExt_weight").value,
+    })
+        // Planks
+    firebase.database().ref("Plank").push({
+        date: currentDate,
+        Plank_sets: document.getElementById("Plank_sets").value,
+        Plank_time: document.getElementById("Plank_time").value,
+    })
+        // Side Plank
+    firebase.database().ref("sidePlank").push({
+        date: currentDate,
+        sidePlank_sets: document.getElementById("sidePlank_sets").value,
+        sidePlank_time: document.getElementById("sidePlank_time").value,
+    })
+        // Scissor Kick
+    firebase.database().ref("sKick").push({
+        date: currentDate,
+        sKick_sets: document.getElementById("sKick_sets").value,
+        sKick_reps: document.getElementById("sKick_reps").value,
+    })
+        // Mason Twist
+    firebase.database().ref("mTwist").push({
+        date: currentDate,
+        mTwist_sets: document.getElementById("mTwist_sets").value,
+        mTwist_reps: document.getElementById("mTwist_reps").value,
+        mTwist_weight: document.getElementById("mTwist_weight").value,
+    })
+        // Cooldown Calories
+    firebase.database().ref("coolCals").push({
+        date: currentDate,
+        cals: document.getElementById("coolCals").value
+    })
+}
+
 // Get Previous Workout Data from the Database
 function getData() {
     // Incline DB Bench Press
@@ -368,5 +450,35 @@ function getData() {
     firebase.database().ref("hCurl").limitToLast(1).on('child_added', function(childSnapshot){
         hCurl = childSnapshot.val();
         document.getElementById("prev_hCurl").innerHTML = hCurl.hCurl_weight;
+    })
+    // Deadlifts
+    firebase.database().ref("dLift").limitToLast(1).on('child_added', function(childSnapshot){
+        dLift = childSnapshot.val();
+        document.getElementById("prev_dLift").innerHTML = dLift.dLift_weight;
+    })
+    // Back Extensions
+    firebase.database().ref("backExt").limitToLast(1).on('child_added', function(childSnapshot){
+        backExt = childSnapshot.val();
+        document.getElementById("prev_backExt").innerHTML = backExt.backExt_weight;
+    })
+    // Plank
+    firebase.database().ref("Plank").limitToLast(1).on('child_added', function(childSnapshot){
+        Plank = childSnapshot.val();
+        document.getElementById("prev_Plank").innerHTML = Plank.Plank_time;
+    })
+    // Side Plank
+    firebase.database().ref("sidePlank").limitToLast(1).on('child_added', function(childSnapshot){
+        sidePlank = childSnapshot.val();
+        document.getElementById("prev_sidePlank").innerHTML = sidePlank.sidePlank_time;
+    })
+    // Scissor Kicks
+    firebase.database().ref("sKick").limitToLast(1).on('child_added', function(childSnapshot){
+        sKick = childSnapshot.val();
+        document.getElementById("prev_sKick").innerHTML = sKick.sKick_reps;
+    })
+    // Mason Twists
+    firebase.database().ref("mTwist").limitToLast(1).on('child_added', function(childSnapshot){
+        mTwist = childSnapshot.val();
+        document.getElementById("prev_mTwist").innerHTML = mTwist.mTwist_weight;
     })
 }
