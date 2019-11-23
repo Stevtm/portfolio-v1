@@ -1,72 +1,267 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette">
-  <link rel="stylesheet" href="dataCSS.css">
-  <script src="jquery.js"> </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src="javascript.js"></script>
-  <title>Steven Maddison Data</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <link rel="stylesheet" href="workoutCSS.css">
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    <script src="workout.js" defer></script>
+    <title>Leg Day Tracking</title>
 </head>
 <body>
-  <div class="container-fluid">
+<div class="container-fluid">
+    <!-- Input Page Header -->
     <div class="row">
-      <!-- Top Section -->
-      <div class="col-sm-12 formPage legsForm" id="formTop">
-        <a class="btn btn-outline-secondary btn-lg workoutbtn" role="button">
-          LEG DAY
-        </a>
-      </div>
-        <!-- Input Forms -->
-      <div class="col-sm-12 formPage" id="formBottom">
-        <form name="submit-to-google-sheet" target="_blank">
-        <div class="dateInput">
-          Day:
-          <input type="text" name="Day" style="width:30px">
-          Month:
-          <input type="text" name="Month" style="width:30px">
-          Year:
-          <input type="text" name="Year" style="width:50px"><br><br>
+        <div class="col-sm-12 workoutDay_header">
+            <h1> 
+                Leg Day Tracking
+            </h1>
         </div>
-        <div class="Weights">
-          Warmup Calories:
-          <input type="text" name="warmCals" style="width:40px"><br><br>
-          Back Squats (3x5):
-          <input type="text" name="Squats" style="width:40px"><br><br>
-          Front Squats (3x5):
-          <input type="text" name="fSquats" style="width:40px"><br><br>
-          Pause Squats (3x5):
-          <input type="text" name="pSquats" style="width:40px"><br><br>
-          Calf Raises (3x12):
-          <input type="text" name="cRaises" style="width:40px"><br><br>
-          Leg Extensions (3x12):
-          <input type="text" name="legExt" style="width:40px"><br><br>
-          Hamstring Curls (3x12):
-          <input type="text" name="legCurls" style="width:40px"><br><br>
-          Cooldown Calories:
-          <input type="text" name="coolCals" style="width:40px"><br><br><br>
-        </div>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
     </div>
-  </div>
+    <div class="row">
+        <!-- Warmup Calories -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="warmupCals_block-leg">
+            <h6 class="block_header" id="warmupCals_header-leg">
+                Warmup Calories
+            </h6>
+            Calories Burned - 
+            <input type="text" id="warmupCals" style="width:100px">
+        </div>
+        <!-- Back Squats -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="bSquat_block">
+            <h6 class="block_header" id="bSquat_header">
+                Back Squat
+            </h6>
+            Sets - 
+            <select class="test form-control" id="bSquat_sets">
+                <option>3</option>
+                <option>1</option>
+                <option>2</option>
+                <option>4</option>
+            </select>
+            x
+            <select class="test form-control" id="bSquat_reps">
+                <option>5</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            - Reps
+            <div class="eightpx_spacer"></div>
+            Weight - 
+            <input type="text" placeholder="lbs" id="bSquat_weight" style="width:40px">
+            <div class="eightpx_spacer"></div>
+            Last Time: 
+            <p id="prev_bSquat"></p>
+            lbs
+        </div>
+        <!-- Front Squats -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="fSquat_block">
+            <h6 class="block_header" id="fSquat_header">
+                Front Squat
+            </h6>
+            Sets - 
+            <select class="test form-control" id="fSquat_sets">
+                <option>3</option>
+                <option>1</option>
+                <option>2</option>
+                <option>4</option>
+            </select>
+            x
+            <select class="test form-control" id="fSquat_reps">
+                <option>5</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            - Reps
+            <div class="eightpx_spacer"></div>
+            Weight - 
+            <input type="text" placeholder="lbs" id="fSquat_weight" style="width:40px">
+            <div class="eightpx_spacer"></div>
+            Last Time: 
+            <p id="prev_fSquat"></p>
+            lbs
+        </div>
+        <!-- Lunges -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="Lunge_block">
+            <h6 class="block_header" id="Lunge_header">
+                Lunges
+            </h6>
+            Sets - 
+            <select class="test form-control" id="Lunge_sets">
+                <option>3</option>
+                <option>1</option>
+                <option>2</option>
+                <option>4</option>
+            </select>
+            x
+            <select class="test form-control" id="Lunge_reps">
+                <option>8</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            - Reps
+            <div class="eightpx_spacer"></div>
+            Weight - 
+            <input type="text" placeholder="lbs" id="Lunge_weight" style="width:40px">
+            <div class="eightpx_spacer"></div>
+            Last Time: 
+            <p id="prev_Lunge"></p>
+            lbs
+        </div>
+        <!-- Calf Raises -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="calfRaise_block">
+            <h6 class="block_header" id="calfRaise_header">
+                Calf Raises
+            </h6>
+            Sets - 
+            <select class="test form-control" id="calfRaise_sets">
+                <option>3</option>
+                <option>1</option>
+                <option>2</option>
+                <option>4</option>
+            </select>
+            x
+            <select class="test form-control" id="calfRaise_reps">
+                <option>8</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            - Reps
+            <div class="eightpx_spacer"></div>
+            Weight - 
+            <input type="text" placeholder="lbs" id="calfRaise_weight" style="width:40px">
+            <div class="eightpx_spacer"></div>
+            Last Time: 
+            <p id="prev_calfRaise"></p>
+            lbs
+        </div>
+        <!-- Leg Extensions -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="legExt_block">
+            <h6 class="block_header" id="legExt_header">
+                Leg Extension
+            </h6>
+            Sets - 
+            <select class="test form-control" id="legExt_sets">
+                <option>4</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            x
+            <select class="test form-control" id="legExt_reps">
+                <option>10</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            - Reps
+            <div class="eightpx_spacer"></div>
+            Weight - 
+            <input type="text" placeholder="lbs" id="legExt_weight" style="width:40px">
+            <div class="eightpx_spacer"></div>
+            Last Time:
+            <p id="prev_legExt"></p>
+            lbs
+        </div>
+        <!-- Hamstring Curls -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="hCurl_block">
+            <h6 class="block_header" id="hCurl_header">
+                Hamstring Curl
+            </h6>
+            Sets - 
+            <select class="test form-control" id="hCurl_sets">
+                <option>4</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+            x
+            <select class="test form-control" id="hCurl_reps">
+                <option>10</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            - Reps
+            <div class="eightpx_spacer"></div>
+            Weight - 
+            <input type="text" placeholder="lbs" id="hCurl_weight" style="width:40px">
+            <div class="eightpx_spacer"></div>
+            Last Time:
+            <p id="prev_hCurl"></p>
+            lbs
+        </div>
+        <!-- Cooldown Calories -->
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="coolCals_block-leg">
+            <h6 class="block_header" id="coolCals_header-leg">
+                Cooldown Calories
+            </h6>
+            Calories Burned -
+            <input type="text" id="coolCals" style="width:100px">
+        </div>
+    </div>
+    <!-- Input Button -->
+    <div class="row">
+        <div class="col-12 input_button">
+            <button class="btn btn-primary btn-lg btn-leg" onclick="leg_writeData()"> Submit </button>
+        </div>
+    </div>    
+</div>    
 </body>
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwExsb97JIiGQ_-uNIInid7KylZX-l70SVKsdarFjxo7IdAcxy5/exec'
-  const form = document.forms['submit-to-google-sheet']
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
 </html>
