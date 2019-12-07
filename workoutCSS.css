@@ -20,11 +20,26 @@ p{
 .eightpx_spacer{
     height: 8px;
 }
+
+/* || WORKOUT SELECTOR PAGE STYLES */
+
+.workout-selector{
+        /* Block Shape */
+        padding-top: 8px;
+        border-radius: 5px;
+        height:  50px;
+        /* Block Styling */
+        color: white;
+}
+
 /* Input Page Headers */
 .workoutDay_header{
     text-align: center;
     padding-top: 30px;
 } 
+.weight_input{
+    width: 70px;
+}
 /* || INPUT BLOCK STYLES */
 
 /* General Block Styles */
@@ -93,6 +108,14 @@ p{
 .btn-back:hover{
     background-color: #525252;
     border-color: #525252;
+}
+.btn-other{
+    color: black;
+    border-color: black;
+}
+.btn-other:hover{
+    background-color: black;
+    border-color: black;
 }
 /* Pull Exercise Block Styles */
 #warmupCals_block-pull{
@@ -293,5 +316,11 @@ p{
     background-color: #020202;
 }
 
-/* Block Headers */
-/* Warmup Calories */
+/* Other Exercise Styles */
+#warmupCals_block-other{ 
+    border-color: black;
+}
+#warmupCals_header-other{
+    background-color: black;
+}
+
