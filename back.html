@@ -4,12 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <link rel="stylesheet" href="workoutCSS.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    <link rel="stylesheet" href="workoutCSS.css">
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    <script src="workout.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+    <script src="workout.js" defer></script>
     <title>Back Day Tracking</title>
 </head>
 <body>
@@ -37,14 +39,14 @@
                 Deadlift
             </h6>
             Sets - 
-            <select class="test form-control" id="dLift_sets">
+            <select class="form-control" id="dLift_sets">
                 <option>4</option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
             </select>
             x
-            <select class="test form-control" id="dLift_reps">
+            <select class="form-control" id="dLift_reps">
                 <option>10</option>
                 <option>1</option>
                 <option>2</option>
@@ -61,9 +63,10 @@
             - Reps
             <div class="eightpx_spacer"></div>
             Weight - 
-            <input type="text" placeholder="lbs" id="dLift_weight" style="width:40px">
+            <input type="text" class="weight_input" id="dLift_weight">
+            lbs
             <div class="eightpx_spacer"></div>
-            Last Time: 
+            Last Time -  
             <p id="prev_dLift"></p>
             lbs
         </div>
@@ -73,14 +76,14 @@
                 Back Extension
             </h6>
             Sets - 
-            <select class="test form-control" id="backExt_sets">
+            <select class="form-control" id="backExt_sets">
                 <option>3</option>
                 <option>1</option>
                 <option>2</option>
                 <option>4</option>
             </select>
             x
-            <select class="test form-control" id="backExt_reps">
+            <select class="form-control" id="backExt_reps">
                 <option>8</option>
                 <option>1</option>
                 <option>2</option>
@@ -97,9 +100,10 @@
             - Reps
             <div class="eightpx_spacer"></div>
             Weight - 
-            <input type="text" placeholder="lbs" id="backExt_weight" style="width:40px">
+            <input type="text" class="weight_input" id="backExt_weight">
+            lbs
             <div class="eightpx_spacer"></div>
-            Last Time: 
+            Last Time - 
             <p id="prev_backExt"></p>
             lbs
         </div>
@@ -109,7 +113,7 @@
                 Plank
             </h6>
             Sets - 
-            <select class="test form-control" id="Plank_sets">
+            <select class="form-control" id="Plank_sets">
                 <option>4</option>
                 <option>1</option>
                 <option>2</option>
@@ -117,9 +121,10 @@
             </select>
             <div class="eightpx_spacer"></div>
             Time - 
-            <input type="text" placeholder="sec" id="Plank_time" style="width:60px">
+            <input type="text" class="weight_input" id="Plank_time">
+            seconds
             <div class="eightpx_spacer"></div>
-            Last Time: 
+            Last Time - 
             <p id="prev_Plank"></p>
             seconds
         </div>
@@ -129,7 +134,7 @@
                 Side Plank
             </h6>
             Sets - 
-            <select class="test form-control" id="sidePlank_sets">
+            <select class="form-control" id="sidePlank_sets">
                 <option>4</option>
                 <option>1</option>
                 <option>2</option>
@@ -137,9 +142,10 @@
             </select>
             <div class="eightpx_spacer"></div>
             Time - 
-            <input type="text" placeholder="sec" id="sidePlank_time" style="width:60px">
+            <input type="text" class="weight_input" id="sidePlank_time">
+            seconds
             <div class="eightpx_spacer"></div>
-            Last Time: 
+            Last Time - 
             <p id="prev_sidePlank"></p>
             seconds
         </div>
@@ -149,14 +155,14 @@
                 Scissor Kick
             </h6>
             Sets - 
-            <select class="test form-control" id="sKick_sets">
+            <select class="form-control" id="sKick_sets">
                 <option>3</option>
                 <option>1</option>
                 <option>2</option>
                 <option>4</option>
             </select>
             x
-            <select class="test form-control" id="sKick_reps">
+            <select class="form-control" id="sKick_reps">
                 <option>25</option>
                 <option>5</option>
                 <option>10</option>
@@ -168,7 +174,7 @@
             </select>
             - Reps
             <div class="eightpx_spacer"></div>
-            Last Time:
+            Last Time - 
             <p id="prev_sKick"></p>
             reps
         </div>
@@ -178,14 +184,14 @@
                 Mason Twists
             </h6>
             Sets - 
-            <select class="test form-control" id="mTwist_sets">
+            <select class="form-control" id="mTwist_sets">
                 <option>3</option>
                 <option>1</option>
                 <option>2</option>
                 <option>4</option>
             </select>
             x
-            <select class="test form-control" id="mTwist_reps">
+            <select class="form-control" id="mTwist_reps">
                 <option>25</option>
                 <option>5</option>
                 <option>10</option>
@@ -198,9 +204,10 @@
             - Reps
             <div class="eightpx_spacer"></div>
             Weight - 
-            <input type="text" placeholder="lbs" id="mTwist_weight" style="width:40px">
+            <input type="text" class="weight_input" id="mTwist_weight">
+            lbs
             <div class="eightpx_spacer"></div>
-            Last Time:
+            Last Time - 
             <p id="prev_mTwist"></p>
             lbs
         </div>
