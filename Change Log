@@ -5,3 +5,9 @@ v1.0.0
 v1.1.0
 
   - First Update -
+  
+  - Weight entry boxes widened
+  - Added units to the end of weight entry boxes for context
+  - Made - and : use consistent
+  - Added new "Other Workout" page, updated database accordingly
+  - Made font bigger on workout selector page
