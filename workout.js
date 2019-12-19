@@ -10,7 +10,9 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-var currentDate = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+// Load date in EST
+var date = new Date();
+var currentDate = new Date(date.getTime() - (date.getTimezoneOffset() * 60000)).toJSON().slice(0,10).replace(/-/g,'/');
 
 // Load Previous Push Day Information from the Database
 window.onload = getData();
