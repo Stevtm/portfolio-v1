@@ -11,3 +11,10 @@ v1.1.0
   - Made - and : use consistent
   - Added new "Other Workout" page, updated database accordingly
   - Made font bigger on workout selector page
+
+v1.2.0
+
+  - Feature Addition -
+  
+  - Added confirmation when submit button clicked
+  - fixed date bug; now uses EST date
