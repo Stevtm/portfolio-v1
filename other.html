@@ -22,6 +22,7 @@
             <h1> 
                 Other Workout Tracking
             </h1>
+            <p id="date"></p>
         </div>
     </div>
     <div class="row">
@@ -44,9 +45,9 @@
     <!-- Input Button -->
     <div class="row">
         <div class="col-12 input_button">
-            <button class="btn btn-primary btn-lg btn-other" onclick="other_writeData()"> Submit </button>
+            <button class="btn btn-primary btn-lg btn-other" onclick="other_writeData(); return confirm('You killed it!')"> Submit </button>
         </div>
-    </div>    
+    </div>  
 </div>    
 </body>
 </html>
