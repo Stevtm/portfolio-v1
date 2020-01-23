@@ -438,7 +438,7 @@ function getData() {
     // Rowing Machine
     firebase.database().ref("rowMachine").limitToLast(1).on('child_added', function(childSnapshot){
         rowMachine = childSnapshot.val();
-        document.getElementById("prev_rowMachine").innerHTML = rowMachine.rowMachine_cals;
+        document.getElementById("prev_rowMachine").innerHTML = rowMachine.rowMachine_time;
     })
     // Back Squats
     firebase.database().ref("bSquat").limitToLast(1).on('child_added', function(childSnapshot){
