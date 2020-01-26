@@ -363,13 +363,6 @@ function back_writeData() {
 
 // Write Other Workout Data to the Database
 function other_writeData() {
-    // Write to "Date" Child
-    firebase.database().ref(currentDate).set({
-        // Type of Other Workout
-        other_type: document.getElementById("other_type").value,
-        // Location of Other Workout
-        other_location: document.getElementById("other_location").value,
-    })
     // Write to Specific Workout Folders:
     var Type = document.getElementById("other_type").value;
     firebase.database().ref(Type).push({
