@@ -18,3 +18,9 @@ v1.2.0
   
   - Added confirmation when submit button clicked
   - fixed date bug; now uses EST date
+  
+v1.3.0
+
+  - New Feature - 
+  
+  - Added chart for each exercise in a modal that can be opened from the exercise header. 
