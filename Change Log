@@ -23,4 +23,5 @@ v1.3.0
 
   - New Feature - 
   
-  - Added chart for each exercise in a modal that can be opened from the exercise header. 
+  - Added chart for each exercise in a modal that can be opened from the exercise header
+  - separated workout.js into individual js documents
