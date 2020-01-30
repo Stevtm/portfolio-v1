@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <link rel="stylesheet" href="workoutCSS.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    <link rel="stylesheet" href="workoutCSS.css">
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-database.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    <script src="workout.js" defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="pull.js" defer></script>
     <title>Pull Day Tracking</title>
 </head>
 <body>
@@ -33,7 +37,7 @@
         </div>
         <!-- Bentover Rows -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="boRow_block">
-            <h6 class="block_header" id="boRow_header">
+            <h6 class="block_header" id="boRow_header" data-toggle="modal" data-target="#boRow_modal">
                 Bentover Rows
             </h6>
             Sets - 
@@ -68,9 +72,27 @@
             <p id="prev_boRow"></p>
             lbs
         </div>
+        <!-- Bentover Rows Modal -->
+        <div class="modal" id="boRow_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Bentover Rows</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <canvas id="boRow_canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Shrugs -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="Shrug_block">
-            <h6 class="block_header" id="Shrug_header">
+            <h6 class="block_header" id="Shrug_header" data-toggle="modal" data-target="#Shrug_modal">
                 Shrugs
             </h6>
             Sets - 
@@ -105,9 +127,27 @@
             <p id="prev_Shrug"></p>
             lbs
         </div>
+        <!-- Shrugs Modal -->
+        <div class="modal" id="Shrug_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Shrugs</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <canvas id="Shrug_canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Seated Rows -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="seatRow_block">
-            <h6 class="block_header" id="seatRow_header">
+            <h6 class="block_header" id="seatRow_header" data-toggle="modal" data-target="#seatRow_modal">
                 Seated Rows
             </h6>
             Sets - 
@@ -142,9 +182,27 @@
             <p id="prev_seatRow"></p>
             lbs
         </div>
+        <!-- Seated Rows Modal -->
+        <div class="modal" id="seatRow_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Seated Rows</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <canvas id="seatRow_canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Lateral Pulldowns -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="latPD_block">
-            <h6 class="block_header" id="latPD_header">
+            <h6 class="block_header" id="latPD_header" data-toggle="modal" data-target="#latPD_modal">
                 Lateral Pulldowns 
             </h6>
             Sets - 
@@ -179,9 +237,27 @@
             <p id="prev_latPD"></p>
             lbs
         </div>
+        <!-- Lateral Pulldowns Modal -->
+        <div class="modal" id="latPD_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Lateral Pulldowns</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <canvas id="latPD_canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Face Pulls -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="facePull_block">
-            <h6 class="block_header" id="facePull_header">
+            <h6 class="block_header" id="facePull_header" data-toggle="modal" data-target="#facePull_modal">
                 Face Pulls
             </h6>
             Sets - 
@@ -216,9 +292,27 @@
             <p id="prev_facePull"></p>
             lbs
         </div>
+        <!-- Face Pulls Modal -->
+        <div class="modal" id="facePull_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Face Pulls</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <canvas id="facePull_canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Rowing Machine -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="rowMachine_block">
-            <h6 class="block_header" id="rowMachine_header">
+            <h6 class="block_header" id="rowMachine_header" data-toggle="modal" data-target="#rowMachine_modal">
                 Rowing Machine
             </h6>
             Minutes - 
