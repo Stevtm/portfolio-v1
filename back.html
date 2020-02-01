@@ -11,7 +11,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
-    <script src="workout.js" defer></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script> 
+    <script src="back.js" defer></script>
     <title>Back Day Tracking</title>
 </head>
 <body>
@@ -35,7 +37,7 @@
         </div>
         <!-- Deadlifts -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="dLift_block">
-            <h6 class="block_header" id="dLift_header">
+            <h6 class="block_header" id="dLift_header" data-toggle="modal" data-target="#dLift_modal">
                 Deadlift
             </h6>
             Sets - 
@@ -70,9 +72,27 @@
             <p id="prev_dLift"></p>
             lbs
         </div>
+        <!-- Deadlifts Modal -->
+        <div class="modal" id="dLift_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Deadlifts</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <canvas id="dLift_canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Back Extensions -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="backExt_block">
-            <h6 class="block_header" id="backExt_header">
+            <h6 class="block_header" id="backExt_header" data-toggle="modal" data-target="#backExt_modal">
                 Back Extension
             </h6>
             Sets - 
@@ -107,9 +127,27 @@
             <p id="prev_backExt"></p>
             lbs
         </div>
+        <!-- Back Extensions Modal -->
+        <div class="modal" id="backExt_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Back Extensions</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <canvas id="backExt_canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Plank -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="Plank_block">
-            <h6 class="block_header" id="Plank_header">
+            <h6 class="block_header" id="Plank_header" data-toggle="modal" data-target="#Plank_modal">
                 Plank
             </h6>
             Sets - 
@@ -128,9 +166,27 @@
             <p id="prev_Plank"></p>
             seconds
         </div>
+        <!-- Plank Modal -->
+        <div class="modal" id="Plank_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Plank</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <canvas id="Plank_canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Side Plank -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="sidePlank_block">
-            <h6 class="block_header" id="sidePlank_header">
+            <h6 class="block_header" id="sidePlank_header" data-toggle="modal" data-target="#sidePlank_modal">
                 Side Plank
             </h6>
             Sets - 
@@ -148,6 +204,24 @@
             Last Time - 
             <p id="prev_sidePlank"></p>
             seconds
+        </div>
+        <!-- Plank Modal -->
+        <div class="modal" id="sidePlank_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Side Plank</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <canvas id="sidePlank_canvas"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Scissor Kicks -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="sKick_block">
@@ -180,7 +254,7 @@
         </div>
         <!-- Mason Twists -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="mTwist_block">
-            <h6 class="block_header" id="mTwist_header">
+            <h6 class="block_header" id="mTwist_header" data-toggle="modal" data-target="#mTwist_modal">
                 Mason Twists
             </h6>
             Sets - 
@@ -210,6 +284,24 @@
             Last Time - 
             <p id="prev_mTwist"></p>
             lbs
+        </div>
+        <!-- Mason Twists Modal -->
+        <div class="modal" id="mTwist_modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Mason Twists</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <canvas id="mTwist_canvas"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- Cooldown Calories -->
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 input_block" id="coolCals_block-back">
