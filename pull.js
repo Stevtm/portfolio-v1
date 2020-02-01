@@ -164,7 +164,8 @@ function getCharts() {
             }
 
             sorted = parseFloat(weights.sort((a, b) => b - a));
-            y_max = sorted + 10;
+            buffer = sorted / 2;
+            y_max = sorted + buffer;
             y_min = sorted - 10
             
 
@@ -242,7 +243,8 @@ function getCharts() {
             }
 
             sorted = parseFloat(weights.sort((a, b) => b - a));
-            y_max = sorted + 10;
+            buffer = sorted / 2;
+            y_max = sorted + buffer;
             y_min = sorted - 10
             
 
@@ -320,7 +322,8 @@ function getCharts() {
             }
 
             sorted = parseFloat(weights.sort((a, b) => b - a));
-            y_max = sorted + 10;
+            buffer = sorted / 2;
+            y_max = sorted + buffer;
             y_min = sorted - 10
             
 
@@ -398,7 +401,8 @@ function getCharts() {
             }
 
             sorted = parseFloat(weights.sort((a, b) => b - a));
-            y_max = sorted + 10;
+            buffer = sorted / 2;
+            y_max = sorted + buffer;
             y_min = sorted - 10
             
 
@@ -476,7 +480,8 @@ function getCharts() {
             }
 
             sorted = parseFloat(weights.sort((a, b) => b - a));
-            y_max = sorted + 10;
+            buffer = sorted / 2;
+            y_max = sorted + buffer;
             y_min = sorted - 10
             
 
