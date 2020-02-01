@@ -25,3 +25,7 @@ v1.3.0
   
   - Added chart for each exercise in a modal that can be opened from the exercise header
   - separated workout.js into individual js documents
+    
+    v1.3.1 
+    
+    - Adjusted the y-axis scaling of the displayed charts
